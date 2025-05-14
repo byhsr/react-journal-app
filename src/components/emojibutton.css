@@ -1,0 +1,31 @@
+.emoji-wrapper {
+  
+  margin-right: 1rem;
+  height: 60px;
+  
+  outline: none; 
+  background-color: #f0f0f0;
+  
+  border-radius: 12px;
+  
+  padding: 0.5rem;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); /* Light shadow when not typing */
+  transition: box-shadow 0.3s ease;
+  position: sticky;
+  
+  font-size: 30px;
+  
+  border-radius: 12px;
+  position: relative; /* Anchors the absolute child */
+  display: inline-block; /* Keeps size tight around button */
+}
+
+.emoji-picker-popup {
+  position: absolute;
+  top: 100%; /* Appears below the button */
+  left: 0;
+  z-index: 9999;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}

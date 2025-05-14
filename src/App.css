@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+.base {
+  position: fixed;      /* Makes the base fixed at the top */
+  top: 0;               /* Positions the base at the top of the screen */
+  left: 0;
+  width: 100%;          /* Stretches across the full width */
+  background-color: rgb(46, 44, 44);
+  z-index: 1000;        /* Ensures the base stays on top of other elements */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for separation */
+  padding: 1rem;        /* Optional padding inside the base */
+  box-sizing: border-box;
+}
+.journal-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+  margin: 0;
+  padding: 0%;
+  
+
+}
+
+.input-section {
+  display: flex; /* Set display to flex */
+  z-index: 0;
+  justify-content: center ;
+  margin-top: 2rem;
+  position: relative;
+ 
+ 
+  
+}
+
+.note {
+  resize: none; 
+  overflow: hidden;           
+  min-height: 60px;
+  outline: none; 
+  background-color: #f0f0f0;
+  min-width: 800px;
+  border-radius: 12px;
+  border: none;
+  padding: 0.5rem;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); /* Light shadow when not typing */
+  transition: box-shadow 0.3s ease;
+  position: sticky;
+
+}
+
+.note:active{
+  transform: translateY(1px); /* Slightly depressed effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+  animation: wiggle 1s ease-in-out infinite; /* Apply wiggle effect */
+}
+
+.Emoji {
+  position: absolute;  
+  min-height: 60px;       /* Or use fixed for screen-based position */
+  top: 10px;                  /* Adjust position as needed */
+  right: 10px;                /* Puts it in top-right corner */
+  z-index: 1000;              /* High z-index to appear above other elements */
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.emoji-container {
+  position: relative; /* Make this container the positioning context */
+}
+
+.action-bar{
+  margin-left: 30px;
+  font-size: 16px;
+  padding: 10px 20px; 
+ cursor: pointer;
+  background-color: #ff0c86; 
+ color: white; 
+ border: none; 
+ border-radius: 10px;
+  height: 40px;
+  width: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+ transition: all 0.3s ease; 
+} 
+
+.action-bar:hover {
+  background-color: #45a049; /* Darker green when hovered */
+  transform: translateY(-2px); /* Slightly raise the button */
+ box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+
+}
+ /* Active (clicked) state */
+ .action-bar:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+   transform: translateY(1px); /* Slightly depressed effect */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+ }
+
+.action-bar {
+  margin-top:40px ;
+  display: flex;
+  justify-content: center;
+  z-index: 10; 
+  /* max-width: 100px; */
+  /* position: relative;
+  right: 40px;
+*/
+}
+
+
+.action-buttons{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  /* left: 440px;
+  bottom: 30px;
+} */
+}
+
+.are{
+  display: flex;
+  flex-direction: row;
+}
+
+.entries {
+  animation: all ease-in 1.2sec;
+  margin-top: 150px; /* Adjust this value based on the height of the base */
+  padding: 1rem;     /* Optional padding for content below */
+}
+
